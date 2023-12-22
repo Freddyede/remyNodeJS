@@ -10,9 +10,8 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const config_1 = require("../config");
 exports.port = 3000;
 exports.app = (0, express_1.default)();
-exports.app
-    .set('view engine', config_1.Config.View)
+exports.app.set('view engine', config_1.Config.Params.view)
     .use((0, cookie_parser_1.default)())
-    .use(body_parser_1.default.urlencoded(config_1.Config.BodyParser))
+    .use(body_parser_1.default.urlencoded(config_1.Config.Params.bodyParser))
     .use(express_1.default.json());
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,8 @@
 export const Config = {
-    BodyParser: {
-        extended: true
-    },
-    View: 'pug'
+    Params: {
+        bodyParser: {
+            extended: true
+        },
+        view: 'pug'
+    }
 }
