@@ -5,18 +5,18 @@ import bodyParser from "body-parser";
 export const Config = {
     app: {
         port: 3000,
+        views: 'view engine',
         get: {
             bodyParser: () => bodyParser,
             cookieParser: () => cookieParser(),
             express: () => express(),
             jsonExpress: () => express.json(),
-            views: () => 'view engine'
         },
         params: {
             bodyParser: {
                 extended: true
             },
-            view: 'pug'
+            views: 'pug'
         }
     },
     databases: {}

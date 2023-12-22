@@ -9,6 +9,6 @@ app
     .use(HomeRoads)
     .use(sessionChecker, AdminRoads);
 
-app.listen(Config.port, () => {
-  return console.log(`Express is listening at http://localhost:${Config.port}`);
+app.listen(Config.app.port, () => {
+  return console.log(`Express is listening at http://localhost:${Config.app.port}`);
 });

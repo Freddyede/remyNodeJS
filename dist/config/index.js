@@ -10,18 +10,18 @@ const body_parser_1 = __importDefault(require("body-parser"));
 exports.Config = {
     app: {
         port: 3000,
+        views: 'view engine',
         get: {
             bodyParser: () => body_parser_1.default,
             cookieParser: () => (0, cookie_parser_1.default)(),
             express: () => (0, express_1.default)(),
             jsonExpress: () => express_1.default.json(),
-            views: () => 'view engine'
         },
         params: {
             bodyParser: {
                 extended: true
             },
-            view: 'pug'
+            views: 'pug'
         }
     },
     databases: {}

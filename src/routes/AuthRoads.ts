@@ -1,5 +1,5 @@
 import express from "express";
-import { index } from "../controllers/AdminRoads";
+import { index } from "../controllers/AdminController";
 
 const AdminRoads = express.Router();
 
