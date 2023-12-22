@@ -1,0 +1,1 @@
+export const index = (_req: any, res: any) => res.redirect('/login');

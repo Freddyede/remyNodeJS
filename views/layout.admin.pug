@@ -1,0 +1,23 @@
+html(lang="fr")
+    head
+        title My Site - #{title}
+        block styles
+            style
+                include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            style
+                include ../public/assets/styles/style.css
+        block scripts
+    body(class="sb-nav-fixed")
+        include ./components/navbar.admin.pug
+        div(id="layoutSidenav")
+            div(id="layoutSidenav_nav")
+                include components/sidebar
+            div(id="layoutSidenav_content")
+                main
+                    block content
+                include components/footer.admin.pug
+        script
+            include ../node_modules/bootstrap/dist/js/bootstrap.bundle.js
+        script
+            include ../public/assets/scripts/scripts.js
+        script(src="https://kit.fontawesome.com/4ec65dfa09.js" crossorigin="anonymous")

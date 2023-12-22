@@ -1,10 +1,12 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import { app, port } from "./constants";
+import { sessionChecker } from "./middleware";
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+import HomeRoads from "./routes/HomeRoads";
+import AdminRoads from "./routes/AuthRoads";
+
+app
+    .use(HomeRoads)
+    .use(sessionChecker, AdminRoads);
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);

@@ -1,4 +1,19 @@
 html(lang="fr")
-head
-body
-
+    head
+        title KEME - #{title}
+        block styles
+            style
+                include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+            style
+                include ../public/assets/styles/main.css
+        block scripts
+    body
+        include components/navbar.pug
+        div(class="row container-fluid")
+            block content
+        include components/footer
+        script
+            include ../node_modules/bootstrap/dist/js/bootstrap.bundle.js
+        script
+            include ../public/assets/scripts/scripts.js
+        script(src="https://kit.fontawesome.com/4ec65dfa09.js" crossorigin="anonymous")

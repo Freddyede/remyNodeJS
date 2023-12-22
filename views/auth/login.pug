@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    div(class="col-12 maxHeight")
+        form(action="/login" method="POST")
+            div(class="form-group col-4 offset-4 mt-5 mb-5")
+                input(class="form-control text-center" placeholder="Email" type="email" name="username")
+            div(class="form-group col-4 offset-4 mt-5 mb-5")
+                input(class="form-control text-center" placeholder="Password" type="password" name="pwd")
+            div(class="col-12 d-flex justify-content-center")
+                button(type="submit" class="btn btn-success") Connexion

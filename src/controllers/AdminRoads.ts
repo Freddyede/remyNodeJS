@@ -1,0 +1,1 @@
+export const index = (req: any, res: any) => res.render('user/index', {title: "Dashboard", user: req.cookies["session_user"]});
