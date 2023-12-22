@@ -1,12 +1,9 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
 import { Config } from "../config";
 
 export const port = 3000;
-export const app = express();
+export const app = Config.get.express();
 
-app.set('view engine', Config.Params.view)
-    .use(cookieParser())
-    .use(bodyParser.urlencoded(Config.Params.bodyParser))
-    .use(express.json());
+app.set('view engine', Config.params.view)
+    .use(Config.get.cookieParser())
+    .use(Config.get.bodyParser().urlencoded(Config.params.bodyParser))
+    .use(Config.get.jsonExpress());
