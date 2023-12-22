@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 
 export const Config = {
     app: {
+        port: 3000,
         get: {
             bodyParser: () => bodyParser,
             cookieParser: () => cookieParser(),
@@ -16,8 +17,7 @@ export const Config = {
                 extended: true
             },
             view: 'pug'
-        },
-        port: 3000
+        }
     },
     databases: {}
 }

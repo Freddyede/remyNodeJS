@@ -9,6 +9,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const body_parser_1 = __importDefault(require("body-parser"));
 exports.Config = {
     app: {
+        port: 3000,
         get: {
             bodyParser: () => body_parser_1.default,
             cookieParser: () => (0, cookie_parser_1.default)(),
@@ -21,8 +22,7 @@ exports.Config = {
                 extended: true
             },
             view: 'pug'
-        },
-        port: 3000
+        }
     },
     databases: {}
 };
