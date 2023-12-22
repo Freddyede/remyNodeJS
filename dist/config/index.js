@@ -12,13 +12,15 @@ exports.Config = {
         bodyParser: () => body_parser_1.default,
         cookieParser: () => (0, cookie_parser_1.default)(),
         express: () => (0, express_1.default)(),
-        jsonExpress: () => express_1.default.json()
+        jsonExpress: () => express_1.default.json(),
+        views: () => 'view engine'
     },
     params: {
         bodyParser: {
             extended: true
         },
         view: 'pug'
-    }
+    },
+    port: 3000
 };
 //# sourceMappingURL=index.js.map

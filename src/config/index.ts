@@ -7,12 +7,14 @@ export const Config = {
         bodyParser: () => bodyParser,
         cookieParser: () => cookieParser(),
         express: () => express(),
-        jsonExpress: () => express.json()
+        jsonExpress: () => express.json(),
+        views: () => 'view engine'
     },
     params: {
         bodyParser: {
             extended: true
         },
         view: 'pug'
-    }
+    },
+    port: 3000
 }
