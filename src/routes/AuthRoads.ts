@@ -1,8 +1,9 @@
 import express from "express";
-import { index } from "../controllers/AdminController";
+import {index, providers} from "../controllers/AdminController";
 
 const AdminRoads = express.Router();
 
-AdminRoads.get('/admin', index)
+AdminRoads.get('/', index)
+AdminRoads.get('/providers', providers)
 
 export default AdminRoads;

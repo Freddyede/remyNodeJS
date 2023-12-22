@@ -10,7 +10,7 @@ const HomeRoads_1 = __importDefault(require("./routes/HomeRoads"));
 const AuthRoads_1 = __importDefault(require("./routes/AuthRoads"));
 constants_1.app
     .use(HomeRoads_1.default)
-    .use(middleware_1.sessionChecker, AuthRoads_1.default);
+    .use("/admin", middleware_1.sessionChecker, AuthRoads_1.default);
 constants_1.app.listen(config_1.Config.app.port, () => {
     return console.log(`Express is listening at http://localhost:${config_1.Config.app.port}`);
 });

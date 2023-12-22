@@ -7,7 +7,7 @@ import AdminRoads from "./routes/AuthRoads";
 
 app
     .use(HomeRoads)
-    .use(sessionChecker, AdminRoads);
+    .use("/admin", sessionChecker, AdminRoads);
 
 app.listen(Config.app.port, () => {
   return console.log(`Express is listening at http://localhost:${Config.app.port}`);
